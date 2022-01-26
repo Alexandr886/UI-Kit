@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+   <link rel="stylesheet" href="styles.css">
+   <title>Ui Kit - Controls</title>
+</head>
+<body>
+   <header class="header">
+      <nav class="nav">
+         <a href="index.html" class="nav__link">Styleguide</a>
+         <a href="controls.html" class="nav__link nav__link_active">Controls</a>
+         <a href="elements.html" class="nav__link">Elements</a>
+         <a href="components.html" class="nav__link">Components</a>
+      </nav>
+   </header>
+   <section class="forms">
+      <div class="container">
+         <div class="heading">
+            <h1 class="heading__number">04.</h1>
+            <p class="heading__title">Form</p>
+         </div>
+         <div class="line"></div>
+         <!-- inputs -->
+         <div class="controls">
+            <div class="control">
+               <p class="control__title">Label</p>
+               <input type="text" class="control__input control__input_blue" placeholder="Placeholder">
+               <p class="control__text">Validation error message</p>
+            </div>
+            <div class="control">
+               <p class="control__title">Label</p>
+               <input type="text" class="control__input" placeholder="Value">
+               <p class="control__text control__text_green">Validation success message</p>
+            </div>
+         </div>
+         <!-- группа inputs -->
+         <div class="controls">
+            <div class="control">
+               <p class="control__title">Label</p>
+               <input type="text" class="control__input control__input_blue" placeholder="Value">
+               <p class="control__text">Validation error message</p>
+            </div>
+            <div class="control">
+               <p class="control__title">Label</p>
+               <input type="text" class="control__input control__input_disabled" placeholder="Value" disabled="disabled">
+               <p class="control__text">Validation error message</p>
+            </div>
+         </div>
+         <!-- inputs с иконками -->
+         <div class="controls">
+            <div class="control">
+               <p class="control__title">Label</p>
+               <div class="input-width-icon">
+                  <input type="search" class="control__input control__input_blue" placeholder="Placeholder">
+                  <button class="input-btn">
+                     <img src="img/search.svg" alt="icon search" class="input-btn__img">
+                  </button>
+               </div>
+               <p class="control__text control__text_hidden">Validation success message</p>
+            </div>
+            <div class="control">
+               <p class="control__title">Label</p>
+               <div class="input-width-icon">
+                  <input type="text" class="control__input" placeholder="Value">
+                  <button class="input-btn">
+                     <img src="img/arrow-left.svg" alt="icon search" class="input-btn__img">
+                  </button>
+               </div>
+               <p class="control__text control__text_green">Validation success message</p>
+            </div>
+            <div class="control">
+               <p class="control__title">Label</p>
+               <div class="input-width-icon">
+                  <input type="text" class="control__input" placeholder="Value">
+                  <button class="input-btn">
+                     <img src="img/alert.svg" alt="icon search" class="input-btn__img">
+                  </button>
+               </div>
+               <p class="control__text">Validation error message</p>
+            </div>
+         </div>
+         <!--группа select -->
+         <div class="controls controls-select">
+            <div class="select">
+               <p class="select__title">Label</p>
+               <div class="select__header">
+                  <span class="select__current">Dropdown</span>
+                  <div class="select__icon"></div>
+               </div>
+               <div class="select__body">
+                  <div class="select__item">Item 1</div>
+                  <div class="select__item">Item 2</div>
+                  <div class="select__item">Item 3</div>
+                  <div class="select__item">Item 4</div>
+               </div>
+            </div>
+            <div class="select">
+               <p class="select__title">Label</p>
+               <div class="select__header">
+                  <span class="select__current">Dropdown</span>
+                  <div class="select__icon"></div>
+               </div>
+               <div class="select__body">
+                  <div class="select__item">Item 1</div>
+                  <div class="select__item">Item 2</div>
+                  <div class="select__item">Item 3</div>
+                  <div class="select__item">Item 4</div>
+               </div>
+            </div>
+         </div>
+         <!-- select disabled -->
+         <div class="controls controls-select">
+            <div class="select">
+               <p class="select__title">Label</p>
+               <div class="select__header_disabled"> <!--  добавить класс 'select__header' для активации select'а -->
+                  <span class="select__current">Dropdown</span>
+                  <div class="select__icon"></div>
+               </div>
+               <div class="select__body">
+                  <div class="select__item">Item 1</div>
+                  <div class="select__item">Item 2</div>
+                  <div class="select__item">Item 3</div>
+                  <div class="select__item">Item 4</div>
+               </div>
+            </div>
+         </div>
+         <!-- группа textarea 1 -->
+         <div class="controls controls-textarea">
+            <div class="control">
+               <p class="control__title">Label</p>
+               <textarea placeholder="Placeholder" class="control__textarea control__textarea_blue"></textarea>
+               <p class="control__text">Validation error message</p>
+            </div>
+            <div class="control">
+               <p class="control__title">Label</p>
+               <textarea placeholder="Value" class="control__textarea"></textarea>
+               <p class="control__text">Validation error message</p>
+            </div>
+         </div>
+         <!-- группа textarea 2 -->
+         <div class="controls">
+            <div class="control">
+               <p class="control__title">Label</p>
+               <textarea placeholder="Value" class="control__textarea"></textarea>
+               <p class="control__text">Validation error message</p>
+            </div>
+            <div class="control">
+               <p class="control__title">Label</p>
+               <textarea placeholder="Value" class="control__textarea control__textarea_disabled" disabled></textarea>
+               <p class="control__text">Validation error message</p>
+            </div>
+         </div>
+         <!-- SVG плюс и минус для счетчиков-->
+         <svg display="none">
+            <symbol id="minus" viewBox="0 0 31 30">
+                  <path d="M8.5 16C7.94772 16 7.5 15.5523 7.5 15C7.5 14.4477 7.94772 14 8.5 14H22.5C23.0523 14 23.5 14.4477 23.5 15C23.5 15.5523 23.0523 16 22.5 16H8.5Z"/>
+                  <mask id="mask0_14767_5030" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="14" width="17" height="2">
+                     <path d="M8.5 16C7.94772 16 7.5 15.5523 7.5 15C7.5 14.4477 7.94772 14 8.5 14H22.5C23.0523 14 23.5 14.4477 23.5 15C23.5 15.5523 23.0523 16 22.5 16H8.5Z" fill="white"/>
+                  </mask>
+            </symbol>
+            <symbol id="plus" viewBox="0 0 31 30">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 7C14.9477 7 14.5 7.44772 14.5 8V14H8.5C7.94772 14 7.5 14.4477 7.5 15C7.5 15.5523 7.94772 16 8.5 16H14.5V22C14.5 22.5523 14.9477 23 15.5 23C16.0523 23 16.5 22.5523 16.5 22V16H22.5C23.0523 16 23.5 15.5523 23.5 15C23.5 14.4477 23.0523 14 22.5 14H16.5V8C16.5 7.44772 16.0523 7 15.5 7Z"/>
+                  <mask id="mask0_14767_5038" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="17" height="16">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 7C14.9477 7 14.5 7.44772 14.5 8V14H8.5C7.94772 14 7.5 14.4477 7.5 15C7.5 15.5523 7.94772 16 8.5 16H14.5V22C14.5 22.5523 14.9477 23 15.5 23C16.0523 23 16.5 22.5523 16.5 22V16H22.5C23.0523 16 23.5 15.5523 23.5 15C23.5 14.4477 23.0523 14 22.5 14H16.5V8C16.5 7.44772 16.0523 7 15.5 7Z" fill="white"/>
+                  </mask>
+            </symbol>
+         </svg>
+         <!-- группа счетчики -->
+         <div class="controls controls-counters">
+            <div class="counter">
+               <button class="counter__btn counter__btn_minus" data-direction="minus">
+                  <svg class="counter__svg">
+                     <use xlink:href='#minus'></use>
+                  </svg>
+               </button>
+               <input type="text" value="01" class="counter__value">
+               <button class="counter__btn counter__btn_plus" data-direction="plus">
+                  <svg class="counter__svg">
+                     <use xlink:href='#plus'></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="counter">
+               <button class="counter__btn counter__btn_minus" data-direction="minus">
+                  <svg class="counter__svg">
+                     <use xlink:href='#minus'></use>
+                  </svg>
+               </button>
+               <input type="text" value="01" class="counter__value">
+               <button class="counter__btn counter__btn_plus" data-direction="plus">
+                  <svg class="counter__svg">
+                     <use xlink:href='#plus'></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="counter">
+               <button class="counter__btn counter__btn_minus" data-direction="minus">
+                  <svg class="counter__svg">
+                     <use xlink:href='#minus'></use>
+                  </svg>
+               </button>
+               <input type="text" value="01" class="counter__value">
+               <button class="counter__btn counter__btn_plus" data-direction="plus">
+                  <svg class="counter__svg">
+                     <use xlink:href='#plus'></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="counter">
+               <button class="counter__btn counter__btn_minus counter__btn_disabled" data-direction="minus" disabled>
+                  <svg class="counter__svg">
+                     <use xlink:href='#minus'></use>
+                  </svg>
+               </button>
+               <input type="text" value="01" class="counter__value counter__value_disabled" disabled>
+               <button class="counter__btn counter__btn_plus counter__btn_disabled" data-direction="plus" disabled>
+                  <svg class="counter__svg">
+                     <use xlink:href='#plus'></use>
+                  </svg>
+               </button>
+            </div>
+         </div>
+         <!-- группа чекбоксы -->
+         <div class="controls controls-checkboxes">
+            <div class="checkboxes">
+               <div class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="checkbox-1">
+                  <label for="checkbox-1" class="checkbox__label">Label</label>
+               </div>
+               <div class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="checkbox-2">
+                  <label for="checkbox-2" class="checkbox__label">Label</label>
+               </div>
+               <div class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="checkbox-3">
+                  <label for="checkbox-3" class="checkbox__label checkbox__label_dash">Label</label>
+               </div>
+            </div>
+            <div class="checkboxes">
+               <div class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="checkbox-4" disabled>
+                  <label for="checkbox-4" class="checkbox__label checkbox__label_disabled">Label</label>
+               </div>
+               <div class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="checkbox-5" disabled>
+                  <label for="checkbox-5" class="checkbox__label checkbox__label_disabled">Label</label>
+               </div>
+               <div class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="checkbox-6" disabled>
+                  <label for="checkbox-6" class="checkbox__label checkbox__label_dash checkbox__label_disabled">Label</label>
+               </div>
+            </div>
+         </div>
+         <!-- группа radio-buttons -->
+         <div class="controls controls-radio-buttons">
+            <div class="radio-buttons">
+               <div class="radio-button">
+                  <input id="radio-1" type="radio" name="radio" value="radio-1" class="radio-button__input">
+                  <label for="radio-1" class="radio-button__label">Label</label>
+               </div>
+               <div class="radio-button">
+                  <input id="radio-2" type="radio" name="radio" value="radio-2" class="radio-button__input" checked>
+                  <label for="radio-2" class="radio-button__label">Label</label>
+               </div>
+            </div>
+            <div class="radio-buttons">
+               <div class="radio-button">
+                  <input id="radio-3" type="radio" name="radio2" value="radio-3" class="radio-button__input" disabled>
+                  <label for="radio-3" class="radio-button__label">Label</label>
+               </div>
+               <div class="radio-button">
+                  <input id="radio-4" type="radio" name="radio2" value="radio-4" class="radio-button__input" checked disabled>
+                  <label for="radio-4" class="radio-button__label">Label</label>
+               </div>
+            </div>
+         </div>
+         <!-- группа переключателей -->
+         <div class="controls controls-switches">
+            <div class="switches">
+               <label class="switch">
+                  <input type="checkbox" class="switch__input">
+                  <span class="switch__slider"></span>
+                  <p class="switch__text">Label</p>
+               </label>
+               <label class="switch">
+                  <input type="checkbox" class="switch__input" checked>
+                  <span class="switch__slider"></span>
+                  <p class="switch__text">Label</p>
+               </label>
+            </div>
+            <div class="switches">
+               <label class="switch">
+                  <input type="checkbox" class="switch__input" disabled>
+                  <span class="switch__slider switch__slider_disabled"></span>
+                  <p class="switch__text">Label</p>
+               </label>
+               <label class="switch">
+                  <input type="checkbox" class="switch__input" disabled>
+                  <span class="switch__slider switch__slider_disabled"></span>
+                  <p class="switch__text">Label</p>
+               </label>
+            </div>
+         </div>
+         <!-- ползунок -->
+         <div class="controls controls-range">
+            <input type="range" min="0" max="100" value="75" id="range" class="slider">
+            <input type="range" min="0" max="100" value="30" id="range2" class="slider slider_disabled" disabled>
+         </div>
+         <!-- группа labels -->
+         <div class="controls controls-labels">
+            <div class="label">
+               <p class="label__text">Label</p>
+               <div class="label__cross"></div>
+            </div>
+            <div class="label label_black">
+               <p class="label__text label__text_white label__text_opacity">Label</p>
+               <div class="label__cross label__cross_opacity"></div>
+            </div>
+            <div class="label label_blue">
+               <p class="label__text label__text_white">Label</p>
+               <div class="label__cross label__cross_white"></div>
+            </div>
+            <div class="label label_orange">
+               <p class="label__text label__text_white">Label</p>
+               <div class="label__cross label__cross_white"></div>
+            </div>
+            <div class="label label_green">
+               <p class="label__text label__text_white">Label</p>
+               <div class="label__cross label__cross_white"></div>
+            </div>
+            <div class="label label_pink">
+               <p class="label__text label__text_white">Label</p>
+               <div class="label__cross label__cross_white"></div>
+            </div>
+         </div>
+         <!-- группа buttons -->
+         <div class="controls controls-buttons">
+            <div class="btns"><!-- мелкие -->
+               <button class="btns__btn btns__btn_white">Button</button>
+               <button class="btns__btn btns__btn_white">Button</button>
+               <button class="btns__btn btns__btn_white">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8" disabled>Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA" disabled>Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-gr">Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-bl">Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-black">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF" disabled>Button</button>
+            </div>
+            <div class="btns btns-middle"><!-- средние -->
+               <button class="btns__btn btns__btn_white ">Button</button>
+               <button class="btns__btn btns__btn_white">Button</button>
+               <button class="btns__btn btns__btn_white">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8" disabled>Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA" disabled>Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-gr">Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-bl">Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-black">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF" disabled>Button</button>
+            </div>
+            <div class="btns btns-big"><!-- крупные -->
+               <button class="btns__btn btns__btn_white ">Button</button>
+               <button class="btns__btn btns__btn_white">Button</button>
+               <button class="btns__btn btns__btn_white">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8" disabled>Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_blue">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA" disabled>Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-gr">Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-bl">Button</button>
+               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-black">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF" disabled>Button</button>
+            </div>
+         </div>
+         <!-- группа alerts -->
+         <div class="controls controls-alert">
+            <div class="alert alert-white">
+               <p class="alert__text">A bright alert flash for dark backgrounds, which never lose the contrast.</p>
+               <div class="alert__cross"></div>
+            </div>
+            <div class="alert alert-black">
+               <p class="alert__text">A bright alert flash for dark backgrounds, which never lose the contrast.</p>
+               <div class="alert__cross"></div>
+            </div>
+            <div class="alert alert-blue">
+               <p class="alert__text">A primary alert flash that looks pretty nice.</p>
+               <div class="alert__cross"></div>
+            </div>
+            <div class="alert alert-orange">
+               <p class="alert__text">A warning alert flash that never sucks.</p>
+               <div class="alert__cross"></div>
+            </div>
+            <div class="alert alert-green">
+               <p class="alert__text">A success alert flash, which never lose the contrast.</p>
+               <div class="alert__cross"></div>
+            </div>
+            <div class="alert alert-pink">
+               <p class="alert__text">An error alert flash that nobody loves.</p>
+               <div class="alert__cross"></div>
+            </div>
+         </div>
+         <!-- группа progress-bar -->
+         <div class="controls controls-progress">
+            <div class="progress-bar">
+               <span class="progress-bar_blue" style="width: 62%;"></span>
+            </div>
+            <div class="progress-bar">
+               <span class="progress-bar_orange" style="width: 37%;"></span>
+            </div>
+            <div class="progress-bar">
+               <span class="progress-bar_green" style="width: 75%;"></span>
+            </div>
+            <div class="progress-bar">
+               <span class="progress-bar_pink" style="width: 50%;"></span>
+            </div>
+         </div>
+         <!-- группа circles -->
+         <div class="controls controls-circles">
+            <div class="circle">
+               <div class="circle__border circle__border_blue">
+                  <div></div>
+               </div>
+            </div>
+            <div class="circle">
+               <div class="circle__border  circle__border_orange">
+                  <div></div>
+               </div>
+            </div>
+            <div class="circle">
+               <div class="circle__border circle__border_green">
+                  <div></div>
+               </div>
+            </div>
+            <div class="circle">
+               <div class="circle__border circle__border_pink">
+                  <div></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <script src="script.js"></script>
+</body>
+</html>
