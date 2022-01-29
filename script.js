@@ -18,32 +18,35 @@ btns.forEach(btn => {
 })
 
 
+
+//--------------Работа с ползунком (slider) на controls.html
+const sliders = document.querySelectorAll('.slider');
+
+sliders.forEach(slider => {
+	slider.addEventListener('mousemove', range);
+	slider.addEventListener('touchmove', range);
+
+	function range() {
+		let x = slider.value;
+		let color = 'linear-gradient(90deg, rgb(8, 128, 174)' + x + '%, rgb(219, 226, 234)' + x + '%)';
+		slider.style.background = color;
+	}
+})
+
+
+
 //-------------------Работа с select на controls.htmls
-let select = function () {
-	let selectHeader = document.querySelectorAll('.select__header');
-	let selectItem = document.querySelectorAll('.select__item');
-	//перебор всех selectHeader и при клике на одном из них вызывается ф-я selectToggle
-	selectHeader.forEach(item => {
-		item.addEventListener('click', selectToggle)
+const defaultSelect = () => {
+	const elements = document.querySelectorAll('.default');
+	elements.forEach(element => {
+		const choiceы = new Choices(element, {
+			 	searchEnabled: false
+			 });
 	})
-	//ф-я selectToggle присваивает/удаляет класс на нужный selectHeader
-	function selectToggle() {
-		this.parentElement.classList.toggle('select-active');
-	}
-	//перебор всех selectItem и при клике на одном из них вызывается ф-я selectChoose
-	selectItem.forEach(item => {
-		item.addEventListener('click', selectChoose)
-	})
-	//ф-я selectChoose заменяет текст в select__current и удаляет класс .select-active для закрытия select
-	function selectChoose() {
-		let text = this.innerText;
-		select = this.closest('.select');
-		currentText = select.querySelector('.select__current');
-		currentText.innerText = text;
-		select.classList.remove('select-active');
-	}
 }
-select();
+
+defaultSelect();
+
 
 
 //-------------------Работа с Rating на elements.htmls
@@ -107,24 +110,3 @@ function initRatings() {
 		}
 	}
 }
-
-
-//-------------------Ползунок на controls.htmls
-let slider = document.getElementById('range');
-
-slider.addEventListener('mousemove', range);
-slider.addEventListener('touchmove', range);
-
-function range() {
-	let x = slider.value;
-	let color = 'linear-gradient(90deg, rgb(8, 128, 174)' + x + '%, rgb(219, 226, 234)' + x + '%)';
-	slider.style.background = color;
-}
-
-
-
-
-
-
-
-
