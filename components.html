@@ -40,8 +40,8 @@
                   <a href="#" class="menu__link">Item</a>
                </div>
                <div class="buttons">
-                  <button class="buttons__btn">Button</button>
-                  <button class="buttons__btn buttons__btn_blue">Button</button>
+                  <button class="btns__btn btns__btn_white">Button</button>
+                  <button class="btns__btn btns__btn_blue">Button</button>
                </div>
                <div class="burger-menu">
                   <div class="burger">
@@ -102,7 +102,7 @@
                   <p class="flap-content__subtitle">Context Label</p>
                   <h1 class="flap-content__title">Hero Title</h1>
                   <p class="flap-content__text">A quick supportive, and easy to understand catchphrase, slogan, tagline, or the punchline of the brand.</p>
-                  <button class="flap-content__btn">Call to Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_big">Call to Action</button>
                </div>
             </div>
             <div class="flap-two">
@@ -110,55 +110,71 @@
                <div class="flap-content">
                   <h1 class="flap-content__title">Hero Title</h1>
                   <p class="flap-content__text">A quick supportive, and easy to understand catchphrase, slogan, tagline, or the punchline of the brand.</p>
-                  <button class="flap-content__btn">Call to Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_big">Call to Action</button>
                </div>
             </div>
             <div class="flap-two flap-two_second">
                <div class="flap-content">
                   <h1 class="flap-content__title">Hero Title</h1>
                   <p class="flap-content__text">A quick supportive, and easy to understand catchphrase, slogan, tagline, or the punchline of the brand.</p>
-                  <button class="flap-content__btn">Call to Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_big">Call to Action</button>
                </div>
                <img src="img/page-components/flap-bg2-big.png" alt="flap bg" class="flap-img-2">
             </div>
             <div class="flap-two flap-two_third">
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
                <div class="bullet">
-                  <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet__img">
+                  <div class="bullet-cover">
+                     <img src="img/page-components/flap-bg-round.png" alt="Bullet image" class="bullet-cover__img">
+                  </div>
                   <h4 class="bullet__title">Bullet Title</h4>
                   <p class="bullet__text">Supportive text and the essential context goes here.</p>
                </div>
@@ -174,21 +190,32 @@
             <p class="heading__title">Modals</p>
          </div>
          <div class="line line-elements"></div>
+         <!-- SVG крестик-->
+         <svg display="none">
+            <symbol id="cross" viewBox="0 0 24 24">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3656 6.63422C17.678 6.94664 17.678 7.45317 17.3656 7.76559L13.1313 11.9999L17.3656 16.2342C17.678 16.5466 17.678 17.0532 17.3656 17.3656C17.0532 17.678 16.5466 17.678 16.2342 17.3656L11.9999 13.1313L7.76559 17.3656C7.45317 17.678 6.94664 17.678 6.63422 17.3656C6.3218 17.0532 6.3218 16.5466 6.63422 16.2342L10.8685 11.9999L6.63422 7.76559C6.3218 7.45317 6.3218 6.94664 6.63422 6.63422C6.94664 6.3218 7.45317 6.3218 7.76559 6.63422L11.9999 10.8685L16.2342 6.63422C16.5466 6.3218 17.0532 6.3218 17.3656 6.63422Z" fill=""/>
+               <mask id="mask0_15041_5959" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="12" height="12">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3656 6.63422C17.678 6.94664 17.678 7.45317 17.3656 7.76559L13.1313 11.9999L17.3656 16.2342C17.678 16.5466 17.678 17.0532 17.3656 17.3656C17.0532 17.678 16.5466 17.678 16.2342 17.3656L11.9999 13.1313L7.76559 17.3656C7.45317 17.678 6.94664 17.678 6.63422 17.3656C6.3218 17.0532 6.3218 16.5466 6.63422 16.2342L10.8685 11.9999L6.63422 7.76559C6.3218 7.45317 6.3218 6.94664 6.63422 6.63422C6.94664 6.3218 7.45317 6.3218 7.76559 6.63422L11.9999 10.8685L16.2342 6.63422C16.5466 6.3218 17.0532 6.3218 17.3656 6.63422Z" fill="white"/>
+               </mask>
+            </symbol>
+         </svg>
          <div class="modals">
             <div class="modal">
                <h3 class="modal__title">Modal Title</h3>
                <p class="modal__text">Left aligned contextual description for modal.</p>
                <div class="buttons modal-btns">
-                  <button class="buttons__btn buttons__btn_blue modal_btn">Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_middle">Action</button>
                </div>
-               <div class="alert__cross modal_cross"></div>
+               <svg class="cross-svg cross-svg_big cross-svg_black cross_modal">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
             <div class="modal">
                <h3 class="modal__title">Modal Title</h3>
                <p class="modal__text">Left aligned contextual description for modal.</p>
                <div class="buttons modal-btns">
-                  <button class="buttons__btn modal_btn modal_btn-border">Cancel</button>
-                  <button class="buttons__btn buttons__btn_blue modal_btn">Action</button>
+                  <button class="btns__btn btns__btn_white btns__btn_middle">Cancel</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_middle">Action</button>
                </div>
             </div>
          </div>
@@ -207,31 +234,30 @@
                <h3 class="callout__title">Callout Title</h3>
                <p class="callout__text">Supportive text for the callout goes here like a pro, which informs and helps users decide what they should do next.</p>
                <div class="buttons callout-btns">
-                  <button class="buttons__btn buttons__btn_blue modal_btn">Action</button>
-                  <button class="buttons__btn modal_btn modal_btn-border">Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_middle">Action</button>
+                  <button class="btns__btn btns__btn_white btns__btn_middle">Action</button>
                </div>
             </div>
             <div class="callout callout_grey">
                <h3 class="callout__title">Callout Title</h3>
                <p class="callout__text">Supportive text for the callout goes here like a pro, which informs and helps users decide what they should do next.</p>
                <div class="buttons callout-btns">
-                  <button class="buttons__btn buttons__btn_blue modal_btn">Action</button>
-                  <button class="buttons__btn modal_btn modal_btn-border modal_btn-grey">Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_middle">Action</button>
+                  <button class="btns__btn btns__btn_gray  btns__btn_middle">Action</button>
                </div>
             </div>
             <div class="callout callout-small callout_grey">
                <p class="callout__text">Supportive text for the callout.</p>
                <div class="buttons callout-btns">
-                  <button class="buttons__btn modal_btn modal_btn-border modal_btn-grey">Action</button>
-                  <button class="buttons__btn buttons__btn_blue modal_btn">Action</button>
-
+                  <button class="btns__btn btns__btn_gray  btns__btn_middle">Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_middle">Action</button>
                </div>
             </div>
             <div class="callout callout-small">
                <p class="callout__text">Supportive text for the callout.</p>
                <div class="buttons callout-btns">
-                  <button class="buttons__btn modal_btn modal_btn-border">Action</button>
-                  <button class="buttons__btn buttons__btn_blue modal_btn">Action</button>
+                  <button class="btns__btn btns__btn_white btns__btn_middle">Action</button>
+                  <button class="btns__btn btns__btn_blue  btns__btn_middle">Action</button>
                </div>
             </div>
          </div>
@@ -284,7 +310,7 @@
                   <div class="card-content">
                      <h4 class="card__title">Card Title</h4>
                      <p class="card__text">Supporting description for the card goes here like a breeze.</p>
-                     <button class="buttons__btn modal_btn modal_btn-border">Action</button>
+                     <button class="btns__btn btns__btn_white btns__btn_middle">Action</button>
                   </div>
                </div>
                <div class="card card-full">
@@ -305,7 +331,7 @@
                   <div class="card-content">
                      <h4 class="card__title">Card Title</h4>
                      <p class="card__text">Supporting description for the card goes here like a breeze.</p>
-                     <button class="buttons__btn modal_btn modal_btn-border">Action</button>
+                     <button class="btns__btn btns__btn_white btns__btn_middle">Action</button>
                   </div>
                </div>
             </div>
@@ -398,7 +424,7 @@
                   <p class="form-content__title">Message or Query</p>
                   <textarea name="message-or-query" class="form-content__input form-content__input_big"></textarea>
               </div>
-              <button class="flap-content__btn">Send Message</button>
+              <button class="btns__btn btns__btn_blue  btns__btn_big">Send Message</button>
             </form>
             <form action="#" class="form form_mini">
                <h4 class="form__title">Sign in</h4>
@@ -412,7 +438,7 @@
                   <p class="form-content__title">Password</p>
                   <input placeholder="" type="password" name="usermail" value="" class="form-content__input">
               </div>
-              <button class="flap-content__btn flap-content__btn_big">Sign In</button>
+              <button class="btns__btn btns__btn_blue btns__btn_big btns__btn_more-big">Sign In</button>
               <a href="#" class="form__link">Forgot password?</a>
             </form>
             <form action="#" class="form form_mini">
@@ -432,10 +458,10 @@
                   <input placeholder="" type="password" name="usermail" value="" class="form-content__input">
                </div>
                <div class="form-content form-content_check">
-                  <input type="checkbox" name="" value=""  id="conditions" class="form-content__check">
-                  <label for="conditions" class="form-content__label">By signing up, I agree to the terms.</label>
+                  <input type="checkbox" class="checkbox__input" id="checkbox-1">
+                  <label for="checkbox-1" class="checkbox__label">By signing up, I agree to the terms.</label>
                </div>
-              <button class="flap-content__btn flap-content__btn_big">Sign In</button>
+               <button class="btns__btn btns__btn_blue btns__btn_big btns__btn_more-big">Sign Up</button>
             </form>
             <form action="#" class="form form_mini">
                <h4 class="form__title">Reset Password</h4>
@@ -445,7 +471,7 @@
                   <p class="form-content__title">Email</p>
                   <input placeholder="" type="email" name="usermail" value="" class="form-content__input">
                </div>
-              <button class="flap-content__btn flap-content__btn_big">Send Reset Link</button>
+               <button class="btns__btn btns__btn_blue btns__btn_big btns__btn_more-big">Send Reset Link</button>
               <a href="#" class="form__link">Back to Sign in</a>
             </form>
          </div>

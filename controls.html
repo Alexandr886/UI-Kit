@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+   <link rel="stylesheet" href="choices.min.css"> <!-- библиотека для select - стили -->
    <link rel="stylesheet" href="styles.css">
    <title>Ui Kit - Controls</title>
 </head>
@@ -86,46 +87,24 @@
          <!--группа select -->
          <div class="controls controls-select">
             <div class="select">
-               <p class="select__title">Label</p>
-               <div class="select__header">
-                  <span class="select__current">Dropdown</span>
-                  <div class="select__icon"></div>
-               </div>
-               <div class="select__body">
-                  <div class="select__item">Item 1</div>
-                  <div class="select__item">Item 2</div>
-                  <div class="select__item">Item 3</div>
-                  <div class="select__item">Item 4</div>
-               </div>
+               <p class="control__title">Label</p>
+               <select name="Dropdown" class="default">
+                  <option value="">Dropdown</option>
+                  <option value="Item">Item</option>
+                  <option value="Item">Item</option>
+                  <option value="Item">Item</option>
+                  <option value="Item">Item</option>
+               </select>
             </div>
-            <div class="select">
-               <p class="select__title">Label</p>
-               <div class="select__header">
-                  <span class="select__current">Dropdown</span>
-                  <div class="select__icon"></div>
-               </div>
-               <div class="select__body">
-                  <div class="select__item">Item 1</div>
-                  <div class="select__item">Item 2</div>
-                  <div class="select__item">Item 3</div>
-                  <div class="select__item">Item 4</div>
-               </div>
-            </div>
-         </div>
-         <!-- select disabled -->
-         <div class="controls controls-select">
-            <div class="select">
-               <p class="select__title">Label</p>
-               <div class="select__header_disabled"> <!--  добавить класс 'select__header' для активации select'а -->
-                  <span class="select__current">Dropdown</span>
-                  <div class="select__icon"></div>
-               </div>
-               <div class="select__body">
-                  <div class="select__item">Item 1</div>
-                  <div class="select__item">Item 2</div>
-                  <div class="select__item">Item 3</div>
-                  <div class="select__item">Item 4</div>
-               </div>
+            <div class="select select_disabled">
+               <p class="control__title">Label</p>
+               <select name="Dropdown" class="default" disabled>
+                  <option value="">Dropdown</option>
+                  <option value="Item">Item</option>
+                  <option value="Item">Item</option>
+                  <option value="Item">Item</option>
+                  <option value="Item">Item</option>
+               </select>
             </div>
          </div>
          <!-- группа textarea 1 -->
@@ -177,33 +156,7 @@
                      <use xlink:href='#minus'></use>
                   </svg>
                </button>
-               <input type="text" value="01" class="counter__value">
-               <button class="counter__btn counter__btn_plus" data-direction="plus">
-                  <svg class="counter__svg">
-                     <use xlink:href='#plus'></use>
-                  </svg>
-               </button>
-            </div>
-            <div class="counter">
-               <button class="counter__btn counter__btn_minus" data-direction="minus">
-                  <svg class="counter__svg">
-                     <use xlink:href='#minus'></use>
-                  </svg>
-               </button>
-               <input type="text" value="01" class="counter__value">
-               <button class="counter__btn counter__btn_plus" data-direction="plus">
-                  <svg class="counter__svg">
-                     <use xlink:href='#plus'></use>
-                  </svg>
-               </button>
-            </div>
-            <div class="counter">
-               <button class="counter__btn counter__btn_minus" data-direction="minus">
-                  <svg class="counter__svg">
-                     <use xlink:href='#minus'></use>
-                  </svg>
-               </button>
-               <input type="text" value="01" class="counter__value">
+               <input type="text" value="1" class="counter__value">
                <button class="counter__btn counter__btn_plus" data-direction="plus">
                   <svg class="counter__svg">
                      <use xlink:href='#plus'></use>
@@ -216,7 +169,7 @@
                      <use xlink:href='#minus'></use>
                   </svg>
                </button>
-               <input type="text" value="01" class="counter__value counter__value_disabled" disabled>
+               <input type="text" value="1" class="counter__value counter__value_disabled" disabled>
                <button class="counter__btn counter__btn_plus counter__btn_disabled" data-direction="plus" disabled>
                   <svg class="counter__svg">
                      <use xlink:href='#plus'></use>
@@ -270,11 +223,11 @@
             <div class="radio-buttons">
                <div class="radio-button">
                   <input id="radio-3" type="radio" name="radio2" value="radio-3" class="radio-button__input" disabled>
-                  <label for="radio-3" class="radio-button__label">Label</label>
+                  <label for="radio-3" class="radio-button__label radio-button__label_disabled">Label</label>
                </div>
                <div class="radio-button">
                   <input id="radio-4" type="radio" name="radio2" value="radio-4" class="radio-button__input" checked disabled>
-                  <label for="radio-4" class="radio-button__label">Label</label>
+                  <label for="radio-4" class="radio-button__label radio-button__label_disabled">Label</label>
                </div>
             </div>
          </div>
@@ -310,103 +263,118 @@
             <input type="range" min="0" max="100" value="75" id="range" class="slider">
             <input type="range" min="0" max="100" value="30" id="range2" class="slider slider_disabled" disabled>
          </div>
+         <!-- SVG крестик-->
+         <svg display="none">
+            <symbol id="cross" viewBox="0 0 24 24">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3656 6.63422C17.678 6.94664 17.678 7.45317 17.3656 7.76559L13.1313 11.9999L17.3656 16.2342C17.678 16.5466 17.678 17.0532 17.3656 17.3656C17.0532 17.678 16.5466 17.678 16.2342 17.3656L11.9999 13.1313L7.76559 17.3656C7.45317 17.678 6.94664 17.678 6.63422 17.3656C6.3218 17.0532 6.3218 16.5466 6.63422 16.2342L10.8685 11.9999L6.63422 7.76559C6.3218 7.45317 6.3218 6.94664 6.63422 6.63422C6.94664 6.3218 7.45317 6.3218 7.76559 6.63422L11.9999 10.8685L16.2342 6.63422C16.5466 6.3218 17.0532 6.3218 17.3656 6.63422Z" fill=""/>
+               <mask id="mask0_15041_5959" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="12" height="12">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3656 6.63422C17.678 6.94664 17.678 7.45317 17.3656 7.76559L13.1313 11.9999L17.3656 16.2342C17.678 16.5466 17.678 17.0532 17.3656 17.3656C17.0532 17.678 16.5466 17.678 16.2342 17.3656L11.9999 13.1313L7.76559 17.3656C7.45317 17.678 6.94664 17.678 6.63422 17.3656C6.3218 17.0532 6.3218 16.5466 6.63422 16.2342L10.8685 11.9999L6.63422 7.76559C6.3218 7.45317 6.3218 6.94664 6.63422 6.63422C6.94664 6.3218 7.45317 6.3218 7.76559 6.63422L11.9999 10.8685L16.2342 6.63422C16.5466 6.3218 17.0532 6.3218 17.3656 6.63422Z" fill="white"/>
+               </mask>
+            </symbol>
+         </svg>
          <!-- группа labels -->
          <div class="controls controls-labels">
             <div class="label">
                <p class="label__text">Label</p>
-               <div class="label__cross"></div>
+               <svg class="cross-svg cross-svg_blue">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
             <div class="label label_black">
                <p class="label__text label__text_white label__text_opacity">Label</p>
-               <div class="label__cross label__cross_opacity"></div>
+               <svg class="cross-svg">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
             <div class="label label_blue">
                <p class="label__text label__text_white">Label</p>
-               <div class="label__cross label__cross_white"></div>
+               <svg class="cross-svg">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
             <div class="label label_orange">
                <p class="label__text label__text_white">Label</p>
-               <div class="label__cross label__cross_white"></div>
+               <svg class="cross-svg">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
             <div class="label label_green">
                <p class="label__text label__text_white">Label</p>
-               <div class="label__cross label__cross_white"></div>
+               <svg class="cross-svg">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
             <div class="label label_pink">
                <p class="label__text label__text_white">Label</p>
-               <div class="label__cross label__cross_white"></div>
+               <svg class="cross-svg">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
          </div>
          <!-- группа buttons -->
          <div class="controls controls-buttons">
             <div class="btns"><!-- мелкие -->
                <button class="btns__btn btns__btn_white">Button</button>
-               <button class="btns__btn btns__btn_white">Button</button>
-               <button class="btns__btn btns__btn_white">Button</button>
                <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8" disabled>Button</button>
                <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
                <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA" disabled>Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-gr">Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-bl">Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-black">Button</button>
+               <button class="btns__btn btns__btn_gray">Button</button>
                <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF" disabled>Button</button>
             </div>
-            <div class="btns btns-middle"><!-- средние -->
-               <button class="btns__btn btns__btn_white ">Button</button>
-               <button class="btns__btn btns__btn_white">Button</button>
-               <button class="btns__btn btns__btn_white">Button</button>
-               <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8" disabled>Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA" disabled>Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-gr">Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-bl">Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-black">Button</button>
-               <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF" disabled>Button</button>
+            <div class="btns"><!-- средние -->
+               <button class="btns__btn btns__btn_white btns__btn_middle">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8  btns__btn_middle" disabled>Button</button>
+               <button class="btns__btn btns__btn_blue  btns__btn_middle">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA  btns__btn_middle" disabled>Button</button>
+               <button class="btns__btn btns__btn_gray  btns__btn_middle">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF  btns__btn_middle" disabled>Button</button>
             </div>
-            <div class="btns btns-big"><!-- крупные -->
-               <button class="btns__btn btns__btn_white ">Button</button>
-               <button class="btns__btn btns__btn_white">Button</button>
-               <button class="btns__btn btns__btn_white">Button</button>
-               <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8" disabled>Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_blue">Button</button>
-               <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA" disabled>Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-gr">Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-bl">Button</button>
-               <button class="btns__btn btns__btn_gray btns__btn_gray-brd-black">Button</button>
-               <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF" disabled>Button</button>
+            <div class="btns"><!-- крупные -->
+               <button class="btns__btn btns__btn_white btns__btn_big">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-EBF4F8  btns__btn_big" disabled>Button</button>
+               <button class="btns__btn btns__btn_blue  btns__btn_big">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-DBE2EA  btns__btn_big" disabled>Button</button>
+               <button class="btns__btn btns__btn_gray  btns__btn_big">Button</button>
+               <button class="btns__btn btns__btn_disabled btns__btn_disabled-CCCBCF  btns__btn_big" disabled>Button</button>
             </div>
          </div>
          <!-- группа alerts -->
          <div class="controls controls-alert">
-            <div class="alert alert-white">
+            <div class="alert alert_white">
                <p class="alert__text">A bright alert flash for dark backgrounds, which never lose the contrast.</p>
-               <div class="alert__cross"></div>
+               <svg class="cross-svg cross-svg_big cross-svg_blue">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
-            <div class="alert alert-black">
-               <p class="alert__text">A bright alert flash for dark backgrounds, which never lose the contrast.</p>
-               <div class="alert__cross"></div>
+            <div class="alert alert_black">
+               <p class="alert__text">A dark alert flash for bright backgrounds, which never lose the contrast.</p>
+               <svg class="cross-svg cross-svg_big">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
-            <div class="alert alert-blue">
+            <div class="alert alert_blue">
                <p class="alert__text">A primary alert flash that looks pretty nice.</p>
-               <div class="alert__cross"></div>
+               <svg class="cross-svg cross-svg_big">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
-            <div class="alert alert-orange">
+            <div class="alert alert_orange">
                <p class="alert__text">A warning alert flash that never sucks.</p>
-               <div class="alert__cross"></div>
+               <svg class="cross-svg cross-svg_big">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
-            <div class="alert alert-green">
+            <div class="alert alert_green">
                <p class="alert__text">A success alert flash, which never lose the contrast.</p>
-               <div class="alert__cross"></div>
+               <svg class="cross-svg cross-svg_big">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
-            <div class="alert alert-pink">
+            <div class="alert alert_pink">
                <p class="alert__text">An error alert flash that nobody loves.</p>
-               <div class="alert__cross"></div>
+               <svg class="cross-svg cross-svg_big">
+                  <use xlink:href='#cross'></use>
+               </svg>
             </div>
          </div>
          <!-- группа progress-bar -->
@@ -449,6 +417,7 @@
          </div>
       </div>
    </section>
+   <script src="choices.min.js"></script> <!-- библиотека для select - js -->
    <script src="script.js"></script>
 </body>
 </html>
