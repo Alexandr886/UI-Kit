@@ -381,8 +381,9 @@ section {
 /*далее классы взяты из devtools - т.е. перебиваем стили из ф-ла "choices.min.css"*/
 .choices__inner {
    width: 360px;
+   height: 55px;                                   /*убрать*/
    background: #FFFFFF;
-   border: 1px solid #DBE2EA;
+   border: 2px solid #DBE2EA;
    padding: 10px;
    box-sizing: border-box;
    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
@@ -427,6 +428,17 @@ section {
    margin: 0;
 }
 
+.choices[data-type*=select-one].is-open::after {
+   transform: rotate(180deg);
+}
+
+/*скрывает placeholder как из списка, так и из "заголовка"
+Если это оставить, то селекту нужна фиксированная высота, чтобы 
+не было подергивания*/
+.choices[data-type*=select-one].is-open .choices__placeholder {
+   display: none;
+}
+
 .select_disabled .choices[data-type*=select-one]::after {
    opacity: 0.3;
 }
@@ -434,7 +446,7 @@ section {
 .select_disabled .choices__inner:hover,
 .select_disabled .is-focused .choices__inner,
 .select_disabled .is-open .choices__inner {
-   border: 1px solid #DBE2EA;
+   border: 2px solid #DBE2EA;
 }
 
 .select_disabled .choices__placeholder {
