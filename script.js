@@ -39,10 +39,11 @@ sliders.forEach(slider => {
 const defaultSelect = () => {
 	const elements = document.querySelectorAll('.default');
 	elements.forEach(element => {
-		const choiceы = new Choices(element, {
-			 	searchEnabled: false
+		const choice = new Choices(element, {
+			 	searchEnabled: false,
+				allowHTML: true, //вот этот параметр не понятно зачем, но без него в консоле предупреждения.
 			 });
-	})
+	})	
 }
 
 defaultSelect();
