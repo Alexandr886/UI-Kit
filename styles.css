@@ -592,6 +592,9 @@ section {
 
 .checkbox__input {
    appearance: none;
+   -webkit-appearance: none;
+   visibility: hidden;
+   opacity: 0;
 }
 
 .checkbox__label {
@@ -673,6 +676,8 @@ section {
 .radio-button__input {
    -webkit-appearance: none;
    appearance: none;
+   visibility: hidden;
+   opacity: 0;
 }
 
 .radio-button__label {
